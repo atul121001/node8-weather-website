@@ -4,7 +4,7 @@ function fetchTheWeather(search){
     if(search){
             message1.textContent = "Loading..."
             message2.textContent = "Loading..."
-            fetch("http://localhost:3000/weather?address="+search).then((res) => {
+            fetch("/weather?address="+search).then((res) => {
             res.json().then((data)=>{
                 if(data.error){
                     console.log(data.error);
@@ -15,7 +15,7 @@ function fetchTheWeather(search){
             });
         })
     }
-        
+
 }
 
 const weatherForm = document.querySelector("form");
