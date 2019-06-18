@@ -7,6 +7,7 @@ const forecasted = (coordinates, callBack) => {
         }else if(err && error){
             callBack(error, undefined);
         }else{
+            console.log(response.body.daily.data[0]);
             callBack(undefined, currently)
         }
     });

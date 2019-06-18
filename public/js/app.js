@@ -3,7 +3,7 @@ console.log("Client side javascript file is loaded");
 function fetchTheWeather(search){
     if(search){
             message1.textContent = "Loading..."
-            message2.textContent = "Loading..."
+
             fetch("/weather?address="+search).then((res) => {
             res.json().then((data)=>{
                 if(data.error){
