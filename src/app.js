@@ -8,7 +8,7 @@ const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
 
-const port = process.env.PORT || port;
+const port = process.env.PORT || 3000;
 
 // configurations
 app.use(express.static(publicDirectoryPath));
@@ -42,7 +42,7 @@ app.get('/help/*', (req, res)=>{
 
 app.get('/about', (req, res)=>{
    res.render('about', {
-       title: "About"
+       title: "About Me"
    });
 });
 
